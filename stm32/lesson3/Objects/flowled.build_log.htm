@@ -1,0 +1,226 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Peitsan Lin, BaldRobot, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+A:\courses\stm32\lesson3\flowled.uvprojx
+Project File Date:  02/06/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+Note: source file '.\stm32f10x_it.c' - object file renamed from '.\Objects\stm32f10x_it.o' to '.\Objects\stm32f10x_it_1.o'.
+Note: source file '.\stm32f10x_it.c' - object file renamed from '.\Objects\stm32f10x_it.o' to '.\Objects\stm32f10x_it_2.o'.
+Note: source file '.\system_stm32f10x.c' - object file renamed from '.\Objects\system_stm32f10x.o' to '.\Objects\system_stm32f10x_1.o'.
+main.c(1): warning: In file included from...
+./HERDWARE/LED\led.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(2): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+main.c(7): warning: implicit declaration of function 'LED_init' is invalid in C99 [-Wimplicit-function-declaration]
+        LED_init();
+        ^
+main.c(15): warning: implicit declaration of function 'GPIO_ResetBits' is invalid in C99 [-Wimplicit-function-declaration]
+                GPIO_ResetBits(GPIOB,GPIO_Pin_5);
+                ^
+3 warnings and 2 errors generated.
+compiling main.c...
+HERDWARE/LED/led.c(1): warning: In file included from...
+./HERDWARE/LED/led.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+HERDWARE/LED/led.c(2): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+HERDWARE/LED/led.c(21): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+HERDWARE/LED/led.c(4): warning: no previous prototype for function 'LED_init' [-Wmissing-prototypes]
+void LED_init(void)
+     ^
+HERDWARE/LED/led.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LED_init(void)
+^
+static 
+3 warnings and 2 errors generated.
+compiling led.c...
+system_stm32f10x.c(65): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning and 2 errors generated.
+compiling system_stm32f10x.c...
+SYSTEM/delay/delay.c(1): warning: In file included from...
+./SYSTEM/delay/delay.h(3): warning: In file included from...
+./SYSTEM/sys\sys.h(3): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+SYSTEM/delay/delay.c(102): warning: implicit conversion loses integer precision: 'unsigned int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        fac_us=SystemCoreClock/8000000;                         //为系统时<D6>拥<C4>1/8  
+              ~~~~~~~~~~~~~~~~^~~~~~~~
+1 warning and 2 errors generated.
+compiling delay.c...
+SYSTEM/sys/sys.c(1): warning: In file included from...
+./SYSTEM/sys/sys.h(3): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+SYSTEM/sys/sys.c(27): error: expected '(' after 'asm'
+__asm void MSR_MSP(u32 addr) 
+      ^
+SYSTEM/sys/sys.c(27): error: expected ';' after top-level asm block
+__asm void MSR_MSP(u32 addr) 
+     ^
+     ;
+SYSTEM/sys/sys.c(29): error: use of undeclared identifier 'MSR'
+    MSR MSP, r0                         //set Main Stack value
+    ^
+SYSTEM/sys/sys.c(27): warning: unused parameter 'addr' [-Wunused-parameter]
+__asm void MSR_MSP(u32 addr) 
+                       ^
+1 warning and 5 errors generated.
+compiling sys.c...
+system_stm32f10x.c(65): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning and 2 errors generated.
+compiling system_stm32f10x.c...
+stm32f10x_it.c(25): warning: In file included from...
+../lesson3/stm32f10x_it.h(27): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+2 errors generated.
+compiling stm32f10x_it.c...
+stm32f10x_it.c(25): warning: In file included from...
+../lesson3/stm32f10x_it.h(27): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+2 errors generated.
+compiling stm32f10x_it.c...
+stm32f10x_it.c(25): warning: In file included from...
+../lesson3/stm32f10x_it.h(27): warning: In file included from...
+../lesson3\stm32f10x.h(8297): warning: In file included from...
+../lesson3/stm32f10x_conf.h(39): warning: In file included from...
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: variable has incomplete type 'void'
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+     ^
+./STM32F10x_FWLib/inc\stm32f10x_gpio.h(358): error: expected ';' after top level declarator
+void GPIO_ResetBi       ts(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+                 ^
+                 ;
+2 errors generated.
+compiling stm32f10x_it.c...
+".\Objects\flowled.axf" - 21 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\keil5 MDK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\keil5 MDK\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
